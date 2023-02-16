@@ -6,6 +6,8 @@ streamlit.text('pizza 🍕')
 streamlit.text('Egg 🥚')
 streamlit.text('Hot dog 🌭')
 streamlit.text('Avacado toast 🥑🥪')
+
+streamlit.header('🍓🍌🍎 making my own smoothie 🍹🥤🧃')
  
  
  
