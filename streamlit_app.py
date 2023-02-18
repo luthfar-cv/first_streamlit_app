@@ -36,7 +36,8 @@ streamlit.text("fruit load list contain:")
 streamlit.dataframe(my_data_row)
 
 item = streamlit.text_input('What fruit would u like to enter?',"");
-streamlit.write('The user entered', item);
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+streamlit.write('Thanks for adding, item);
 
 
 
