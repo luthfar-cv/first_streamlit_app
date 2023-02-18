@@ -33,9 +33,9 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 
 item = streamlit.text_area('Enter fruit',"");
 streamlit.write('The user entered', item);
-cursor = conn.cursor()
+my_cur = my_cnx.cursor()
 cursor.execute("INSERT INTO fruit_load_list(item) VALUES (%s)", (item,))
-conn.commit()
+my_cur.commit()
 
 my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchall()
