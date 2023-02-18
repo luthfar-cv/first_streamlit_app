@@ -29,18 +29,17 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-
-
-item = streamlit.text_area('Enter fruit',"");
-streamlit.write('The user entered', item);
 my_cur = my_cnx.cursor()
-my_cur.execute("INSERT INTO fruit_load_list(item) VALUES (%s)", (item,))
-my_cur.commit()
-
 my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchall()
 streamlit.text("fruit load list contain:")
 streamlit.dataframe(my_data_row)
+
+item = streamlit.text_input('What fruit would u like to enter?',"");
+streamlit.write('The user entered', item);
+
+
+
  
  
  
