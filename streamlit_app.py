@@ -35,6 +35,8 @@ my_data_row = my_cur.fetchall()
 streamlit.text("fruit load list contain:")
 streamlit.dataframe(my_data_row)
 
+text = streamlit.text_area('Enter fruit',"");
+
  
  
  
