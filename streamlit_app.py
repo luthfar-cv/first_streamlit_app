@@ -36,6 +36,7 @@ streamlit.text("fruit load list contain:")
 streamlit.dataframe(my_data_row)
 
 text = streamlit.text_area('Enter fruit',"");
+streamlit.write('The user entered', text);
 
  
  
